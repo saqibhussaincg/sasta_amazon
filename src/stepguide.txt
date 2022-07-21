@@ -1,0 +1,25 @@
+01 
+-- Firebase Implemtation --
+
+-- install Firebase
+
+3 chezain on karna parhengi 
+atuhentication
+firestore
+storage
+
+Firebase mai ja kar ye 3 chezain activate karin or import kara kar export bhi kar din.
+or ye sara kaam firebaseConfig.js wali file mai kara.
+
+02 -- 
+App.js
+routing per kaam karenge.
+
+03 -- 
+Navbar.js
+navbar banaya os mai (Link) kara diya same path de kar jo routes mai dia tha.
+click karne per is (Link) per chala jaye.
+sub component mai (Navbar.js) copy paste kar denge ya phr direct (index.js) mai (Navbar.js) wala component paste karne se bhi sub component per show ho jata hai.
+
+04 --
+Signup.js per kaam kar rahay hain.
