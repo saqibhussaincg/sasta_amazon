@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Navbar from '../navbar/Navbar'
+import './signup.css';
 
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -43,6 +44,7 @@ const Signup = () => {
             email : email,
             password : password,
             address : address,
+            cart : initialCartValue,
             uid : user.uid,
         })
         .then(() => {
@@ -56,7 +58,7 @@ const Signup = () => {
 
             setTimeout(() => {
                 setSuccessMsg('');
-                navigate('./login');
+                navigate('/login');
             }, 3000);
         })
         .catch((error) => {setErrorMsg(error.message)});
@@ -65,7 +67,8 @@ const Signup = () => {
         // .catch((error) => {
         // const errorCode = error.code;
         // const errorMessage = error.message;
-     
+        // alert(errorCode);
+        // alert(errorMessage);
         // });
 
         .catch((error) => {
@@ -132,10 +135,10 @@ const Signup = () => {
                 />
 
                 <label>Address</label>
-                <testarea
+                <textarea
                 onChange={(e) => setAddress(e.target.value)}
                 type='text' placeholder='Enter Your Address'>
-                </testarea>
+                </textarea>
                 
                 <button type='submit'>Sign Up</button>
 
