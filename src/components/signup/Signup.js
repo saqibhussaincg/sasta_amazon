@@ -72,11 +72,11 @@ const Signup = () => {
         // });
 
         .catch((error) => {
-            if(error.message == 'Firebase: Error (auth/invalid-email).')
+            if(error.message === 'Firebase: Error (auth/invalid-email).')
             {
                 setErrorMsg('Please Fill All Required Fields')
             } 
-            if(error.message == 'Firebase: Error (auth/email-already-in-use).')
+            if(error.message === 'Firebase: Error (auth/email-already-in-use).')
             {
                 setErrorMsg('User Already Exists')
             } 
@@ -87,9 +87,12 @@ const Signup = () => {
     <div>
         <Navbar />
         <div className='signup-container'>
+
             <form
             onSubmit={handleSubmit}
             className='signup-form'>
+                <h1>Sasta Amazon</h1>
+                <p>Sastay Se Bhi Sasta 😂</p>
                 <p>Create Account</p>
 
                 {successMsg && 
@@ -153,3 +156,18 @@ const Signup = () => {
 }
 
 export default Signup
+
+
+// Jo firebase ka data the firebase config file mai osay ek variable mai store kara kar export kara or idhar import kara.
+
+// addDoc Collection firebase se import kara or use kara.
+
+// ek form banaya os mai input fields banai, un fields mai onChange ka function banaya or setState wali value use karin.
+
+// form k andar sumbit ka Handle Function banaya or osay use karte hoay os function k andar CreateUser karaya jo firebase se copy kara, or os k baad    data store karaya firebase k collection mai addDoc firebase k builtin method ki madad se.
+
+// setTimeOut ka function bhi use kara k sub kuch hone k baad Navigate kara do Login k page per.
+
+// error or success ki useState bhi use kara.
+
+// // auth firebaseConfig.js se connect karne k liye use hota hai.
