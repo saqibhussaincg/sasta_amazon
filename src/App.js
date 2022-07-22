@@ -7,7 +7,7 @@ import Signup from './components/signup/Signup';
 import Login from './components/login/Login';
 import PgFOF from './components/errorpage/PgFOF';
 import Cart from './components/cart/Cart';
-import Profile from './profile/Profile';
+import Profile from './components/profile/Profile';
 
 function App() {
   return (
