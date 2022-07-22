@@ -26,3 +26,14 @@ Signup.js per kaam kar rahay hain.
 
 05 --
 Login.js per kaam kar rahay hain.
+
+06 --
+Banner.js wali file per kaam kar rahay hain.
+Bootstrap ka carousel banaya hai.
+
+07 --
+Home.js wali file per kaam kar rahay hain.
+User jo login hai os ka data sub jagah show karana hai.
+sub se pehle check karna parhega k kon sa user loged in hai tou os us ki (UID) se pata chalega.
+Databse se Data lana parhega.
+atuhentication se bs ye pata chalega k kon sa user loged in hai.
