@@ -88,7 +88,7 @@ const Navbar = () => {
                 <span className='cart-icon-css'>0</span>
         </div>  */}
 
-        <Link to='userprofile'>
+        <Link to='/userprofile'>
             <img src={profilelogo} alt='logo' className='profile-icon' />
         </Link>
 
@@ -102,7 +102,7 @@ const Navbar = () => {
                 <img src={cartlogo} alt='cart image' />
                 <span className='cart-icon-css'>0</span>
         </div> 
-        <Link to='userprofile'>
+        <Link to='/userprofile'>
             <img src={profilelogo} alt='logo' className='profile-icon' />
         </Link>
         
