@@ -1,8 +1,13 @@
+.navbar{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    align-items: center;
+}
+
 nav{
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    background-color: black;
+    justify-content: center;
     align-items: center;
 }
 
@@ -14,8 +19,24 @@ nav button{
     cursor: pointer;
 }
 
+.LeftContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.LeftContainer img{
+    width: 10%;
+}
+.RightContainer{
+    width: 100%;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+}
+
 .cart-icon-css{
     color: white;
+    margin: 0 40px;
 }
 
 .cart-btn{
@@ -27,6 +48,7 @@ nav button{
 .cart-btn img{
     width: 30px;
     height: fit-content;
+    color: white;
 }
 
 .cart-icon-css{
@@ -45,4 +67,16 @@ nav button{
 .profile-icon{
     width: 30px;
     padding-top: 10px;
+    margin-right: 20px;
+}
+
+.logout-btn{
+    background-color: rgb(255, 187, 0 );
+    border-radius: 10px;
+}
+
+.logout-btn:hover{
+    background-color: white;
+    color: rgb(255, 187, 0 );
+    cursor: pointer;
 }

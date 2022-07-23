@@ -72,7 +72,7 @@ const Login = () => {
             className='login-form'>
                 <h1>Sasta Amazon</h1>
                 <p>Sastay Se Bhi Sasta 😂</p>
-                <p>Create Account</p>
+                <p>Login Karo</p>
 
                 {successMsg && 
                     <>

@@ -37,3 +37,6 @@ User jo login hai os ka data sub jagah show karana hai.
 sub se pehle check karna parhega k kon sa user loged in hai tou os us ki (UID) se pata chalega.
 Databse se Data lana parhega.
 atuhentication se bs ye pata chalega k kon sa user loged in hai.
+
+08 --
+Navbar.js wali file mai kaam kar rahay hain.
