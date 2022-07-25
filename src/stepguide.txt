@@ -40,3 +40,7 @@ atuhentication se bs ye pata chalega k kon sa user loged in hai.
 
 08 --
 Navbar.js wali file mai kaam kar rahay hain.
+
+09 --
+UserProfile.js wali file mai kaam kar rahay hain.
+same abhi wohi (Home.js) wala kaam kara user online hai tou ye dikhao warna kuch na dikhao.
