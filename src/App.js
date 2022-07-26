@@ -8,6 +8,7 @@ import Login from './components/login/Login';
 import PgFOF from './components/errorpage/PgFOF';
 import Cart from './components/cart/Cart';
 import UserProfile from './components/profile/UserProfile';
+import AddProduct from './components/addproduct/AddProduct';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <Route exact path='/signup' element={<Signup />} />
       <Route exact path='/login' element={<Login />} />
       <Route exact path='/cart' element={<Cart />} />
-      <Route exact path='/userprofile' element={<UserProfile />} />
+      <Route exact path='/sellproduct' element={<AddProduct />} />
       <Route path='*' element={<PgFOF />} />
     </Routes>
   );

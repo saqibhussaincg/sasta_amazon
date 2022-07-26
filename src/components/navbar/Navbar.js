@@ -98,6 +98,7 @@ const Navbar = () => {
         {user &&
         <nav>
         <Link to='/'><button>Home</button></Link>
+        <Link to='/sellproduct'><button>Sell</button></Link>
         <div className='cart-btn'>
                 <img src={cartlogo} alt='cart image' />
                 <span className='cart-icon-css'>0</span>
