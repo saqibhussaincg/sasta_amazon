@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useId } from 'react'
 import Navbar from '../navbar/Navbar'
+import './addproduct.css'
 
 import { useState, useEffect } from 'react'
 
 
-import { collection, query, where, getDocs } from 'firebase/firestore';
+import { collection, query, where, getDocs, addDoc } from 'firebase/firestore';
 
 import { auth, db } from '../../FirebaseConfigs/firebaseConfig'
 
 import { onAuthStateChanged } from "firebase/auth";
+
+import { getStorage, ref, getDownloadURL, uploadBytes,  } from "firebase/storage";
+
+
 
 
 
@@ -21,7 +26,7 @@ const AddProduct = () => {
     const [producttitle, setProductTitle] = useState('')
     const [producttype, setProductType] = useState('')
     const [description, setDescription] = useState('')
-    const [brad, setBrand] = useState('')
+    const [brand, setBrand] = useState('')
     const [customersupport, setCustomerSupport] = useState('')
     const [price, setPrice] = useState('')
     const [warranty, setWarranty] = useState('')
@@ -30,12 +35,15 @@ const AddProduct = () => {
     const [imageError, setImageError] = useState('')
     const [successMsg, setSuccessMsg] = useState('')
     const [uploadErr, setUploadEror] = useState('')
+
+   
   
 
     const types = ['image/jpg', 'image/jpeg', 'image/png', 'image/PNG']
     
     const handleProductImg = (e) => {
         e.preventDefault();
+       
 
         let selectedFile = e.target.files[0];
 
@@ -57,7 +65,31 @@ const AddProduct = () => {
     
     const handleAddProduct = (e) => {
         e.preventDefault();
-        console.log('add product chal raha hai');
+
+        const storage = getStorage();
+        const storageRef = ref(storage, `product-images${producttype.toUpperCase()}/${Date.now()}`)
+
+        // console.log(storageRef._location.path);
+
+        uploadBytes(storageRef, productimage)
+          .then(() => {
+            getDownloadURL(storageRef).then(url => {
+              addDoc(collection(db, `products-${producttype.toUpperCase()}`),{
+                producttitle,
+                producttype,
+                description,
+                brand,
+                customersupport,
+                price,
+                warranty,
+                productimage : url
+               
+              })
+            })
+          })
+        
+          alert('data added')
+        
     }
 
     useEffect(() => {
